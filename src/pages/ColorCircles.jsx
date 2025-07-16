@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 
 const ColorCircles = () => {
-  // Define how many circles we want
   const numberOfCircles = 6;
 
-  // Initial colors: all gray
   const initialColors = Array(numberOfCircles).fill('bg-gray-400');
 
   const [circleColors, setCircleColors] = useState(initialColors);
 
-  // Toggle individual circle color
   const toggleColor = (index) => {
     setCircleColors((prev) =>
       prev.map((color, i) =>
@@ -18,12 +15,10 @@ const ColorCircles = () => {
     );
   };
 
-  // Set all to red
   const makeAllRed = () => {
     setCircleColors(Array(numberOfCircles).fill('bg-red-500'));
   };
 
-  // Reset to initial gray
   const resetColors = () => {
     setCircleColors(initialColors);
   };
