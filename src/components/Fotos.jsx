@@ -15,7 +15,7 @@ function Fotos() {
 
     return (
         <>
-            <div className=" flex items-center justify-center">
+            <div className=" flex flex-col items-center justify-center">
                 <select
                     value={item}
                     onChange={(e) => setItem(e.target.value)}
